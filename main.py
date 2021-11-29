@@ -27,8 +27,7 @@ dlg = None
 p = None
 is_server_on = False
 my_queue = queue.Queue()
-channel_value = 798497606036357151
-
+channel_value = channel_val
 
 def terraria_command(command):
     global dlg
@@ -122,7 +121,7 @@ async def Lyann_meds():
         await asyncio.sleep(seconds_until(20,0))
         acknowledged = False
         print("It is time for Lyann to take her meds")
-        member = '<@315602626655944705>'
+        member = 'player'
         while not acknowledged:
             await channel.send("{}, take meds".format(member))
             await asyncio.sleep(60)
@@ -204,7 +203,7 @@ client.loop.create_task(Lyann_meds())
 
 #Lyann_meds.start()
 
-client.run('ODM4OTI0MzYwOTk0NzgzMjMy.YJCLMg.Eg6cXESznGr-p93iu9LYgpYP9Dc')
+client.run('token')
 # print(message)
-# if ('Tim#5259' or 'aimi#1915') != '{0.author}'.format(message):
+# if ('people') != '{0.author}'.format(message):
 #    await message.channel.send('Hello! I am being worked on :two_hearts:')
